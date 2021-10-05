@@ -29,7 +29,7 @@ if (isset($_POST['request'])) {
     $bname = $_POST['bname'];
     $bauth = $_POST['bauth'];
 
-    $query1 = "SELECT * FROM `request` WHERE `book_name` like '$bname'";
+    $query1 = "SELECT * FROM `book` WHERE `bname` like '$bname' and `bauthor` like '$bauth'";
     $result1 = mysqli_query($conn, $query1);
     $row1 = mysqli_num_rows($result1);
 
