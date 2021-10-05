@@ -21,6 +21,15 @@ $conn = mysqli_connect("localhost", "root", "", "bluepen_lms");
 
 if (isset($_GET['returned'])) {
     $del_id = $_GET['returned'];
+    $query5 = "SELECT `bid` FROM `snb` WHERE id = $del_id";
+    $result5 = mysqli_query($conn, $query5);
+    while ($row5 = mysqli_fetch_assoc($result5)) {
+        $bid = $row5['bid'];
+        // echo $bid;
+        $query6 = "UPDATE `book` SET total_copies = total_copies + 1 WHERE `book`.`bid` = $bid";
+        $result6 = mysqli_query($conn, $query6);
+    }
+
     $query4 = "DELETE FROM `snb` WHERE `snb`.`id` = $del_id";
     $result4 = mysqli_query($conn, $query4);
     header("Location: admin_home.php");
