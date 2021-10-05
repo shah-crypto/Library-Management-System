@@ -23,6 +23,9 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="admin_home.php">Dashboard</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="issue_book.php">Issue book</a>
+                    </li>
                 </ul>
                 <!-- <form class="d-flex">
                     <input class="form-control" type="search" placeholder="Search a book" required>
