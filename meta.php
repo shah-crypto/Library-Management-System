@@ -14,6 +14,22 @@
             margin: 0;
             padding: 0;
         }
+
+        body {
+            background: url('https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1356&h=668&fit=crop');
+            max-width: 100%;
+            max-height: 100%;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .table {
+            background-color: white;
+        }
+
+        h2,small {
+            color: black;
+        }
     </style>
 </head>
 
