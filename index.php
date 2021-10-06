@@ -2,9 +2,12 @@
 include('meta.php');
 ?>
 
+<title>LMS</title>
+
 <style>
     .card {
         width: 50vw;
+        height: 50vh;
         margin: auto;
         background: #fff;
         border-radius: 10px;
@@ -14,9 +17,11 @@ include('meta.php');
 </style>
 
 <body>
-    <div class="container my-5 py-3 card text-center">
+    <div class="container my-5 py-3 text-center">
         <h2>Welcome to BluePen's LMS</h2>
-        <span>New user? <a href="signup.php">Signup here</a></span>
-        <span>Already a user? <a href="login.php">Login</a></span>
+        <div class="card pt-5">
+            <h3>New user? <a href="signup.php">Signup here</a></h3>
+            <h3>Already a user? <a href="login.php">Login</a></h3>
+        </div>
     </div>
 </body>
