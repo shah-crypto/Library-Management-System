@@ -30,6 +30,12 @@ if (isset($_POST['issue'])) {
     $tempdate2 = str_replace('/', '-', $rdate);
     $newrdate = date('Y-m-d', strtotime($tempdate2));
 
+    $query6 = "UPDATE `book` SET total_copies = total_copies - 1 WHERE `book`.`bid` = $bname";
+    $result6 = mysqli_query($conn, $query6);
+
+    $query7 = "UPDATE `student` SET books_issued = books_issued + 1 WHERE `student`.`sid` = $sname";
+    $result7 = mysqli_query($conn, $query7);
+
     // echo $sname." ".$bname." ".$newidate." ".$newrdate;
 
     $query1 = "INSERT INTO `snb` (`id`, `sid`, `bid`, `issue_date`, `return_date`, `fine`) VALUES (NULL, '$sname', '$bname', '$newidate', '$newrdate', '0')";

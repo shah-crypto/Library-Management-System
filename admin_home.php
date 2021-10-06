@@ -3,7 +3,7 @@ include('meta.php');
 include('admin_header.php');
 ?>
 
-<title>Home</title>
+<title>Admin Home</title>
 
 <style>
     table {
@@ -13,6 +13,10 @@ include('admin_header.php');
     .issued-books-div h2,
     .books-div h2 {
         text-align: center;
+    }
+
+    td a {
+        text-decoration: none;
     }
 </style>
 
@@ -79,7 +83,7 @@ if (isset($_GET['returned'])) {
                                     $sname = $row2['sname'];
                                     $year = $row2['year'];
                                 ?>
-                                    <td><?php echo $sname; ?></td>
+                                    <td><a href="student_info.php?id=<?php echo $sid; ?>"><?php echo $sname; ?></a></td>
                                     <td><?php echo $year; ?></td>
                                 <?php
                                 }
