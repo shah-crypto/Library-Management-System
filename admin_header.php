@@ -27,10 +27,9 @@
                         <a class="nav-link" aria-current="page" href="issue_book.php">Issue book</a>
                     </li>
                 </ul>
-                <!-- <form class="d-flex">
-                    <input class="form-control" type="search" placeholder="Search a book" required>
-                    <button class="btn btn-outline-primary ms-1" type="submit"><i class="fas fa-search"></i></button>
-                </form> -->
+                <div class="d-flex">
+                    <button class="btn btn-sm btn-danger ms-1" type="submit">Logout</button>
+                </div>
                 <!-- <div class="ms-2">Welcome, <span>admin</span>!</div> -->
             </div>
         </div>
