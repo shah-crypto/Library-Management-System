@@ -6,7 +6,7 @@ include('admin_header.php');
 <title>Student Profile</title>
 
 <?php
-$conn = mysqli_connect("localhost", "root", "", "bluepen_lms");
+include('connect.php');
 
 if (isset($_GET['id'])) {
     $profile_id = $_GET['id'];
@@ -82,7 +82,6 @@ if (isset($_GET['id'])) {
                     </thead>
 
                     <?php
-                    $conn = mysqli_connect("localhost", "root", "", "bluepen_lms");
 
                     $query1 = "SELECT * FROM snb WHERE sid = $profile_id";
                     $result1 = mysqli_query($conn, $query1);

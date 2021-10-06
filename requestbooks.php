@@ -21,7 +21,7 @@ include('student_header.php');
 </style>
 
 <?php
-$conn = mysqli_connect("localhost", "root", "", "bluepen_lms");
+include('connect.php');
 
 $reqSucc = false;
 $bookExists = false;

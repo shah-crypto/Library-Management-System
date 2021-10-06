@@ -21,7 +21,7 @@ include('admin_header.php');
 </style>
 
 <?php
-$conn = mysqli_connect("localhost", "root", "", "bluepen_lms");
+include('connect.php');
 
 if (isset($_GET['returned'])) {
     $del_id = $_GET['returned'];
@@ -60,7 +60,6 @@ if (isset($_GET['returned'])) {
                 </thead>
 
                 <?php
-                $conn = mysqli_connect("localhost", "root", "", "bluepen_lms");
 
                 $query1 = "SELECT * FROM snb";
                 $result1 = mysqli_query($conn, $query1);
@@ -135,7 +134,6 @@ if (isset($_GET['returned'])) {
                 </thead>
 
                 <?php
-                $conn = mysqli_connect("localhost", "root", "", "bluepen_lms");
 
                 $query1 = "SELECT * FROM book ORDER BY bname";
                 $result1 = mysqli_query($conn, $query1);

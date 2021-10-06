@@ -33,7 +33,7 @@ include('student_header.php');
                 </thead>
 
                 <?php
-                $conn = mysqli_connect("localhost", "root", "", "bluepen_lms");
+                include('connect.php');
 
                 $query1 = "SELECT * FROM book ORDER BY bname";
                 $result1 = mysqli_query($conn, $query1);

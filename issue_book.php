@@ -16,7 +16,7 @@ include('admin_header.php');
 </style>
 
 <?php
-$conn = mysqli_connect("localhost", "root", "", "bluepen_lms");
+include('connect.php');
 
 $issueSucc = false;
 if (isset($_POST['issue'])) {
