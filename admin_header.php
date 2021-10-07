@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
+    header('Location: login.php');
+    exit;
+}
+?>
+
 <style>
     .btn-outline-primary {
         color: black;
@@ -7,6 +15,11 @@
     .btn-outline-primary:hover {
         color: white !important;
         background-color: #c0e3fe;
+    }
+
+    #logout-btn a {
+        text-decoration: none;
+        color: white;
     }
 </style>
 </head>
@@ -28,7 +41,7 @@
                     </li>
                 </ul>
                 <div class="d-flex">
-                    <button class="btn btn-sm btn-danger ms-1" type="submit">Logout</button>
+                    <button class="btn btn-sm btn-danger ms-1" id="logout-btn" name="logout" type="submit"><a href="logout.php">Logout</a></button>
                 </div>
                 <!-- <div class="ms-2">Welcome, <span>admin</span>!</div> -->
             </div>

@@ -39,6 +39,8 @@ if (isset($_POST['login'])) {
         $result2 = mysqli_query($conn, $query2);
         $row2 = mysqli_num_rows($result2);
         if ($row2 > 0) {
+            session_start();
+            $_SESSION['loggedin'] = true;
             header("Location: admin_home.php");
         } else {
             $wrongCred = true;
