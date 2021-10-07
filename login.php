@@ -30,6 +30,12 @@ if (isset($_POST['login'])) {
         $result1 = mysqli_query($conn, $query1);
         $row1 = mysqli_num_rows($result1);
         if ($row1 > 0) {
+            while ($row5 = mysqli_fetch_assoc($result1)) {
+                $student_id = $row5['sid'];
+            }
+            session_start();
+            $_SESSION['stu-loggedin'] = true;
+            $_SESSION['student_id'] = $student_id;
             header("Location: student_home.php");
         } else {
             $wrongCred = true;

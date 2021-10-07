@@ -53,11 +53,11 @@ include('student_header.php');
                                 <td><?php echo $total_pages; ?></td>
                                 <td><?php echo $year; ?></td>
                             </tr>
-                    <?php
+                        </tbody>
+                <?php
                     }
                 }
-                    ?>
-                        </tbody>
+                ?>
             </table>
         </div>
         <!-- <a href="requestbooks.php" class="btn btn-primary">Request new books</a> -->
