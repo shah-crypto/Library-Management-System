@@ -48,15 +48,8 @@ if (!isset($_SESSION['stu-loggedin']) || $_SESSION['stu-loggedin'] != true) {
                         <a class="nav-link" aria-current="page" href="reviews.php">Review us</a>
                     </li>
                 </ul>
-                <!-- <form class="d-flex">
-                    <input class="form-control" type="search" placeholder="Search a book" required>
-                    <button class="btn btn-outline-primary ms-1" type="submit"><i class="fas fa-search"></i></button>
-                </form> -->
-                <div class="d-flex">
-                    <button class="btn btn-sm btn-danger me-2" id="logout-btn" name="logout" type="submit"><a href="logoutstudent.php">Logout</a></button>
-                    <a href="profile.php"><i class="me-2 fas fa-user-circle"></i></a>
-                </div>
-                <!-- <div class="ms-2">Welcome, <span>admin</span>!</div> -->
+                <button class="btn btn-sm btn-danger me-3" id="logout-btn" name="logout" type="submit"><a href="logoutstudent.php">Logout</a></button>
+                <a href="profile.php"><i class="me-2 fas fa-user-circle"></i></a>
             </div>
         </div>
     </nav>
